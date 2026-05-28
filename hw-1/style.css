@@ -1,0 +1,129 @@
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", "arial";
+  color: black;
+}
+
+.hero-page {
+  background-image: url(img/header-img.jpg);
+  padding-top: 198px;
+}
+.hero-page__content {
+  margin-bottom: 156px;
+}
+.hero-page__title {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.hero-page__descr {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  margin-bottom: 48px;
+}
+.hero-page__btn {
+  border: 1px solid black;
+  border-radius: 60px;
+  width: 247px;
+  padding: 16px 65px;
+  font-size: 24px;
+  font-weight: 600;
+  background-color: black;
+  color: #fff;
+  transition: 1s;
+  cursor: pointer;
+}
+.hero-page__btn:hover {
+  background-color: #fff;
+  color: black;
+}
+.hero-page__list {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: nowrap;
+  gap: 51px;
+}
+.hero-page__item {
+  max-width: 588px;
+}
+
+.games {
+  background-color: black;
+  color: white;
+  padding-top: 94px;
+}
+.games__title {
+  margin-bottom: 24px;
+  font-size: 64px;
+  font-weight: 700;
+}
+.games__descr {
+  margin-bottom: 72px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+}
+.games__content {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: flex-start;
+}
+.games__list {
+  max-height: 1056px;
+  gap: 32px;
+}
+.games-card {
+  border: 0.1px solid;
+  border-radius: 30px;
+  background-color: #fff;
+  color: black;
+  width: 378px;
+  margin-bottom: 32px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+.games-card:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
+.games-card__img {
+  border-radius: 30px;
+  max-width: 378px;
+}
+.games-card__text {
+  padding: 32px;
+}
+.games-card__descr {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 16px;
+}
+.games-card__title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.footer {
+  background-color: #BDED35;
+  min-height: 150px;
+}
+.footer__title {
+  display: flex;
+  justify-content: center;
+  padding-top: 61px;
+  font-size: 24px;
+  font-weight: 600;
+}/*# sourceMappingURL=style.css.map */

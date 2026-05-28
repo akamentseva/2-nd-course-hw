@@ -1,0 +1,133 @@
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat", "arial";
+    color: black;
+}
+
+.hero-page{
+  background-image: url(img/header-img.jpg);
+  padding-top: 198px;
+  
+  &__content{
+    margin-bottom: 156px;
+  }
+  &__title{
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  &__descr{
+    font-size: 24px;   
+    line-height: 32px;
+    font-weight: 400;
+    margin-bottom: 48px;
+  }
+  &__btn{
+    border: 1px solid black;
+    border-radius: 60px;
+    width: 247px;
+    padding: 16px 65px;
+    font-size: 24px;
+    font-weight: 600;
+    background-color: black;
+    color: #fff;
+    transition: 1s;
+    cursor: pointer;
+    &:hover{
+        background-color: #fff;
+        color: black;
+    }
+  }
+  &__list{
+    display: flex;
+    list-style-type: none;
+    flex-wrap: nowrap;
+    gap: 51px;
+  }
+  &__item{
+    max-width: 588px;
+  }
+}
+
+.games{
+    background-color: black;
+    color: white;
+    padding-top: 94px;
+    &__title{
+        margin-bottom: 24px;
+        font-size: 64px;
+        font-weight: 700;
+    }
+    &__descr{
+        margin-bottom: 72px;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 400;
+    }
+    &__content{
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        align-items: flex-start;
+    }
+    &__list{
+        max-height: 1056px;
+        gap: 32px;
+    }
+    &-card{
+        border: 0.1px solid;
+        border-radius: 30px;
+        background-color: #fff;
+        color: black;
+        width: 378px;
+        margin-bottom: 32px;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        will-change: transform;
+        &:hover{
+            transform: scale(1.05);
+            z-index: 1;
+        }
+        &__img{
+            border-radius: 30px;
+            max-width: 378px;
+        }
+        &__text{
+            padding: 32px;
+        }
+        &__descr{
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 16px;
+        }
+        &__title{
+            font-size: 32px;
+            font-weight: 700;
+        }
+    }
+}
+
+
+
+
+.footer{
+    background-color: #BDED35;
+    min-height: 150px;
+    &__title{
+        display: flex;
+        justify-content: center;
+        padding-top: 61px;
+        font-size: 24px;
+        font-weight: 600;
+        }
+}
