@@ -17,6 +17,10 @@ body{
 .hero-page{
   background-image: url(img/header-img.jpg);
   padding-top: 198px;
+  &__item{
+    font-size: 30px;
+    font-weight: 700;
+  }
   
   &__content{
     margin-bottom: 156px;

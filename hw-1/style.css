@@ -18,6 +18,10 @@ body {
   background-image: url(img/header-img.jpg);
   padding-top: 198px;
 }
+.hero-page__item {
+  font-size: 30px;
+  font-weight: 700;
+}
 .hero-page__content {
   margin-bottom: 156px;
 }
