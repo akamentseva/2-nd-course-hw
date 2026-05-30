@@ -13,13 +13,63 @@ body{
     font-family: "Montserrat", "arial";
     color: black;
 }
+a{
+  text-decoration: none;
+}
 
 .hero-page{
   background-image: url(img/header-img.jpg);
   padding-top: 198px;
+  position: relative;
   &__item{
     font-size: 30px;
     font-weight: 700;
+  }
+  &__star{
+    position: absolute;
+    &-2{
+      left: 63px;
+      top: 94px;
+    }
+    &-3{
+      left: 156px;
+      top: 69px;
+    }
+    &-5{
+      right: 455px;
+      bottom: 225px;
+    }
+    &-4{
+      bottom: 149px;
+      right: 344px;
+    }
+  }
+  &__vector{
+    position: absolute;
+    &-1{
+      right: 0;
+      top: 0;
+    }
+    &-4788{
+      right: 113px;
+      bottom: 206px;
+    }
+    &-4782{
+      right: 0;
+      bottom: 0;
+    }
+    &-4791{
+      right: 61px;
+      bottom: 13px;
+    }
+    &-4781{
+      right: 231px;
+      top: 254px;
+    }
+    &-4780{
+      right: 269px;
+      top: -10px;
+    }
   }
   
   &__content{
@@ -39,6 +89,7 @@ body{
   &__btn{
     border: 1px solid black;
     border-radius: 60px;
+    text-decoration: none;
     width: 247px;
     padding: 16px 65px;
     font-size: 24px;
@@ -53,6 +104,7 @@ body{
     }
   }
   &__list{
+    background-color: #BCEC30;
     display: flex;
     list-style-type: none;
     flex-wrap: nowrap;
