@@ -119,6 +119,12 @@ a {
   background-color: black;
   color: white;
   padding-top: 94px;
+  position: relative;
+}
+.games__star {
+  position: absolute;
+  transform: rotate(-2.23deg);
+  right: -60px;
 }
 .games__title {
   margin-bottom: 24px;
