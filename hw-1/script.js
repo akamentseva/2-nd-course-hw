@@ -16,7 +16,7 @@ sum = a + b;
 difference = a - b;
 product = a * b;
 quotient  = a / b;
-console.log(`Сумма чисел: ${sum}`, `Разность чисел : ${difference}`, `Произведение чисел: ${product}`, `Частное чисел: ${quotient}`);
+console.log(`Сумма чисел: ${sum}`, `Разность чисел : ${difference}`,`Произведение чисел: ${product}`, `Частное чисел: ${quotient}`);
 //5
 let result = 2 ** 5;
 alert(result);
