@@ -1,3 +1,4 @@
+
 .center {
   padding-left: calc(50% - 600px);
   padding-right: calc(50% - 600px);
@@ -12,6 +13,12 @@
 body{
     font-family: "Montserrat", "arial";
     color: black;
+}
+a,
+input,
+button,
+select {
+  font-family: "Montserrat", "Arial";
 }
 a{
   text-decoration: none;
@@ -120,11 +127,12 @@ a{
     color: white;
     padding-top: 94px;
     position: relative;
+    padding-bottom: 96px;
     &__star{
       position: absolute;
       transform: rotate(-2.23deg);
       right: -60px;
-
+      overflow: hidden;
     }
     &__title{
         margin-bottom: 24px;
@@ -180,7 +188,70 @@ a{
     }
 }
 
+.mini-games{
+  background-color: black;
+  color: white;
+  &__title{
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 72px;
+  }
+  
+  &__content{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
 
+  &-card{
+    border: 0.1px solid ;
+    border-radius: 30px;
+    background-color: #fff;
+    color: black;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    &__text{
+      flex: 1;
+      &_left{
+        padding-left: 48px;
+      }
+    }
+    &__title{
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+    &__descr{
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 36px;
+    }
+    &__btn{
+      background-color: black;
+      color: white;
+      border: 1px solid black;
+      border-radius: 60px;
+      padding: 16px 75.5px;
+      text-decoration: none;
+      display: inline-block;
+      transition: 1s;
+      &:hover{
+        background-color: #fff;
+        color: black;
+      }
+    }
+    &__img{
+      width: 600px;
+      height: auto;
+      border-radius: 30px;
+      object-fit: cover;
+    }
+  }
+
+}
 
 
 .footer{
@@ -194,3 +265,6 @@ a{
         font-weight: 600;
         }
 }
+
+@import 'tablet';
+@import 'mobile';
