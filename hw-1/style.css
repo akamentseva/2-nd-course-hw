@@ -53,6 +53,9 @@ a {
   bottom: 149px;
   right: 344px;
 }
+.hero-page__vectors-mob {
+  display: none;
+}
 .hero-page__vector {
   position: absolute;
 }
@@ -93,6 +96,7 @@ a {
   line-height: 32px;
   font-weight: 400;
   margin-bottom: 48px;
+  width: 720px;
 }
 .hero-page__btn {
   border: 1px solid black;
@@ -280,24 +284,33 @@ a {
 }
 @media (max-width: 767px) {
   .center {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .hero-page {
+    padding-top: 147px;
   }
   .hero-page__title {
     font-size: 40px;
     font-weight: 700;
     text-align: center;
+    margin-bottom: 24px;
   }
   .hero-page__descr {
     font-size: 16px;
     font-weight: 400;
     text-align: center;
+    width: 296px;
+    margin-bottom: 36px;
   }
   .hero-page__content {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 296px;
+    margin-bottom: 0;
+    padding-bottom: 182px;
+    padding-left: 24px;
   }
   .hero-page__btn {
     width: 285px;
@@ -308,39 +321,40 @@ a {
   .hero-page__vector {
     display: none;
   }
-  .hero-page__vector-1 {
-    display: block;
-    width: 223px;
-    height: 238px;
-    transform: rotate(-2.23deg);
+  .hero-page__star {
+    display: none;
   }
-  .hero-page__star-2 {
-    width: 35px;
-    height: 35px;
+  .hero-page__vectors-mob {
+    display: block;
+  }
+  .hero-page__vector-mob {
+    position: absolute;
+  }
+  .hero-page__vector-mob-1 {
+    right: 0;
+    top: 0;
+  }
+  .hero-page__vector-mob-2 {
     left: 37px;
     top: 97px;
   }
-  .hero-page__star-3 {
-    width: 21px;
-    height: 21px;
+  .hero-page__vector-mob-3 {
     left: 91px;
     top: 64px;
   }
-  .hero-page__star-4 {
-    width: 39px;
-    height: 41px;
+  .hero-page__vector-mob-4 {
     opacity: 1;
     top: 580px;
-    left: 304px;
+    left: 303px;
     border-width: 1px;
+    margin-top: 40px;
   }
-  .hero-page__star-5 {
-    width: 18;
-    height: 18;
+  .hero-page__vector-mob-5 {
     opacity: 1;
     top: 557px;
-    left: 273px;
+    left: 272px;
     border-width: 1px;
+    margin-top: 35px;
   }
   .games {
     display: none;

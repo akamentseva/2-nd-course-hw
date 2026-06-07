@@ -51,6 +51,9 @@ a{
       right: 344px;
     }
   }
+  &__vectors-mob{
+    display: none;
+  }
   &__vector{
     position: absolute;
     &-1{
@@ -92,6 +95,7 @@ a{
     line-height: 32px;
     font-weight: 400;
     margin-bottom: 48px;
+    width: 720px;
   }
   &__btn{
     border: 1px solid black;

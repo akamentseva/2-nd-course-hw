@@ -5,10 +5,10 @@ a=20;
 alert(a);
 //2
 let firstIphone = 2007;
-console.log(firstIphone);
+alert(firstIphone);
 //3
 let creatorJS = 'Брендан Эйх';
-console.log(creatorJS);
+alert(creatorJS);
 //4
 let a = 10;
 let b = 2;
@@ -16,7 +16,7 @@ sum = a + b;
 difference = a - b;
 product = a * b;
 quotient  = a / b;
-console.log(`Сумма чисел: ${sum}`, `Разность чисел : ${difference}`,`Произведение чисел: ${product}`, `Частное чисел: ${quotient}`);
+alert(`Сумма чисел: ${sum}`, `Разность чисел : ${difference}`,`Произведение чисел: ${product}`, `Частное чисел: ${quotient}`);
 //5
 let result = 2 ** 5;
 alert(result);
