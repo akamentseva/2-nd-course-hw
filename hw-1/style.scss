@@ -131,12 +131,22 @@ a{
     color: white;
     padding-top: 94px;
     position: relative;
-    padding-bottom: 96px;
+    padding-bottom: 50px;
     &__star{
       position: absolute;
+      &-1{
       transform: rotate(-2.23deg);
       right: -60px;
       overflow: hidden;
+      }
+      &-11{
+        bottom: 665px;
+        left: 25px;
+      }
+      &-12{
+        bottom: 588px;
+        left: 40px;
+      }
     }
     &__title{
         margin-bottom: 24px;
@@ -194,7 +204,29 @@ a{
 
 .mini-games{
   background-color: black;
+  padding-top: 46px;
   color: white;
+  position: relative;
+  padding-bottom: 112px;
+  &__star{
+    position: absolute;
+    &-7{
+      right: 123px;
+      top: 93px;
+    }
+    &-6{
+      right: 45px;
+      top: 126px;
+    }
+    &-8{
+      right: 52px;
+      bottom: 65px;
+    }
+    &-10{
+      right: 150px;
+      bottom: 45px;
+    }
+  }
   &__title{
     font-size: 64px;
     font-weight: 700;
@@ -204,7 +236,6 @@ a{
   &__content{
     display: flex;
     flex-direction: column;
-    gap: 32px;
   }
 
   &-card{
@@ -221,6 +252,13 @@ a{
       flex: 1;
       &_left{
         padding-left: 48px;
+        padding-top: 48px;
+        transform: translateY(-48px);
+      }
+      &_right{
+        padding-right: 48px;
+        padding-top: 48px;
+        transform: translateY(-48px);
       }
     }
     &__title{
