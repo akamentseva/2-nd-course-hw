@@ -280,6 +280,8 @@ a {
   text-decoration: none;
   display: inline-block;
   transition: 1s;
+  font-size: 24px;
+  font-weight: 600;
 }
 .mini-games-card__btn:hover {
   background-color: #fff;
