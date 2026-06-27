@@ -2,9 +2,37 @@
     .center{
         padding-left: calc(50% - 393px);
         padding-right: calc(50% - 393px);
+        overflow: hidden;
+    }
+    .hero-page{
+        &__vectors{
+            display: none;
+        }
     }
     .games{
         display: none;
+    }
+    .mini-games{
+        &__title{
+            font-size: 52px;
+        }
+        &-card{
+            max-width: 100%;
+            &__title{
+            font-size: 32px;
+            font-weight: 700;
+            }
+            &__descr{
+               font-size: 20px; 
+            }
+            &__btn{
+                font-size: 20px;
+            }
+            &__img{
+                width: 500px;
+            }
+        }
+        
     }
 }
 @media (max-width: 833px){
