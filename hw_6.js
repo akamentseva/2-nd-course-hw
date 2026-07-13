@@ -89,8 +89,8 @@ const arr = [];
 for (let i = 0; i < 6; i++) {
     arr.push(Math.floor(Math.random() * 10) + 1);
 }
-const sum = numbers.reduce((acc, num) => acc + num, 0);
-const average = sum / numbers.length;
-console.log('Исходный массив:', numbers);
+const sum = arr.reduce((acc, num) => acc + num, 0);
+const average = sum / arr.length;
+console.log('Исходный массив:', arr);
 console.log('Сумма элементов:', sum);
 console.log('Среднее арифметическое:', average);
