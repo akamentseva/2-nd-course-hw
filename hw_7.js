@@ -79,5 +79,6 @@ function formatDateTime(date) {
     }
     return `Дата: ${day} ${month} ${year} — это ${weekday}\nВремя: ${hours}:${minutes}:${seconds}`;
 }
+
 const now = new Date();
 console.log(formatDateTime(now));
