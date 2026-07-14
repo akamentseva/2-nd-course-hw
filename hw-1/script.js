@@ -50,7 +50,7 @@ if (correctAnswer === 0) {
 function startArithmeticBtn() {
     const numberOne = Math.floor(Math.random() * 20) + 1;
     const numberTwo = Math.floor(Math.random() * 20) + 1;
-    let example = Number(prompt('Введите тип решения задачи:\n\n 1.Сложение\n 2.Вычитание\n 3.Умножение\n 4.Деление'));
+    const example = Math.floor(Math.random() * 4) + 1;
     while (isNaN(example) || example < 1 || example > 4){
         example = Number(prompt('Вы ввели неправильное число, введите от 1 до 4:\n\n 1.Сложение\n 2.Вычитание\n 3.Умножение\n 4.Деление'))
     }
@@ -72,7 +72,20 @@ function startArithmeticBtn() {
             exampleText = `${numberTwo} ÷ ${numberOne}`;
         }
     }
-     let userAnswer = Number(prompt(`Решите пример:\n\n ${exampleText} = ?`));
+     let userInput = Number(prompt(`Решите пример:\n\n ${exampleText} = ?`));
+     if (userInput === null) {
+        alert('Игра прервана. Вы нажали "Отмена".');
+        return;
+    }
+    if (userInput === '') {
+        alert('Вы ничего не ввели. Игра прервана.');
+        return;
+    }
+    let userAnswer = Number(userInput);
+    if (isNaN(userAnswer)) {
+        alert(`Вы ввели не число. Игра прервана.`);
+        return;
+    }
      if (correctAnswer === userAnswer) {
         alert('Ваш ответ правильный!');
      } else {
@@ -82,8 +95,18 @@ function startArithmeticBtn() {
 
 function startGameGuessNumberBtn() {
     const number = Math.floor(Math.random() * 100) + 1;
-    let numberUser = Number(prompt('Вы начинаете игру!\n\n Введите ваше число:'));
+    let userInput = prompt('Вы начинаете игру!\n\n Введите ваше число:');
+    if (userInput === null) {
+        alert('Игра прервана. Вы нажали "Отмена".');
+            return;
+    }
+    if (userInput === '') {
+            alert('Вы ничего не ввели. Игра прервана.');
+            return;
+    }
+    let numberUser = Number(userInput);
     while (numberUser != number) {
+        
         if (isNaN(numberUser) || numberUser < 1 || numberUser > 100){
             numberUser = Number(prompt('Вы ввели неправильное число.\n\n Введите число от 1 до 100.'))
             continue;
@@ -99,14 +122,31 @@ function startGameGuessNumberBtn() {
 }
 
 function startInvertedTextBtn() {
-    const text = String(prompt('Введите текст который вы хотите перевернуть!'));
-    if (!isNaN(text) && text.trim() !== ''){
-        text = prompt('Вы ввели число!\n\n Введите слово:');
+    let userInput = prompt('Введите текст который вы хотите перевернуть!');
+    if (userInput === null) {
+        alert('Игра прервана. Вы нажали "Отмена".');
+        return;
     }
-    if (text.trim() === '') {
+    if (userInput.trim() === '') {
+        alert('Вы ничего не ввели! Игра прервана.');
+        return;
+    }
+    if (!isNaN(userInput) && userInput.trim() !== ''){
+        let newInput = prompt('Вы ввели число!\n\n Введите слово или текст:');
+        if (newInput === null) {
+            alert('Игра прервана. Вы нажали "Отмена".');
+            return;
+    }
+    if (newInput.trim() === '') {
         alert('Вы ничего не ввели!');
         return;
     }
-    const textReversed = text.split('').reverse().join('');
+     if (!isNaN(newInput.trim())) {
+            alert('Вы опять ввели число! Игра прервана.');
+            return;
+    }
+    userInput = newInput;
+}
+    const textReversed = userInput.split('').reverse().join('');
     alert(`Перевернутый текст:\n\n ${textReversed}`);
 }
