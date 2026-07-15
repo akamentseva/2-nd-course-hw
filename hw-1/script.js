@@ -51,9 +51,6 @@ function startArithmeticBtn() {
     const numberOne = Math.floor(Math.random() * 20) + 1;
     const numberTwo = Math.floor(Math.random() * 20) + 1;
     const example = Math.floor(Math.random() * 4) + 1;
-    while (isNaN(example) || example < 1 || example > 4){
-        example = Number(prompt('Вы ввели неправильное число, введите от 1 до 4:\n\n 1.Сложение\n 2.Вычитание\n 3.Умножение\n 4.Деление'))
-    }
     if (example === 1) {
         correctAnswer = numberOne + numberTwo;
         exampleText = `${numberOne} + ${numberTwo}`;
@@ -72,7 +69,7 @@ function startArithmeticBtn() {
             exampleText = `${numberTwo} ÷ ${numberOne}`;
         }
     }
-     let userInput = Number(prompt(`Решите пример:\n\n ${exampleText} = ?`));
+     let userInput = prompt(`Решите пример:\n\n ${exampleText} = ?`);
      if (userInput === null) {
         alert('Игра прервана. Вы нажали "Отмена".');
         return;
@@ -80,6 +77,16 @@ function startArithmeticBtn() {
     if (userInput === '') {
         alert('Вы ничего не ввели. Игра прервана.');
         return;
+    }
+    if (isNaN(userInput)){
+        userInput = prompt(`Вы ввели не число.\n\n Введите ответ:\n\n ${exampleText} = ?`);
+        if (userInput === '') {
+        alert('Вы ничего не ввели. Игра прервана.');
+        return; }
+        if (userInput === null) {
+        alert('Игра прервана. Вы нажали "Отмена".');
+        return;
+         }
     }
     let userAnswer = Number(userInput);
     if (isNaN(userAnswer)) {
@@ -91,7 +98,9 @@ function startArithmeticBtn() {
      } else {
         alert(`Ваш ответ неправильный!\n\n Правильный ответ: \n ${exampleText} = ${correctAnswer}`);
      }
-}
+    }
+    
+    
 
 function startGameGuessNumberBtn() {
     const number = Math.floor(Math.random() * 100) + 1;
@@ -104,10 +113,25 @@ function startGameGuessNumberBtn() {
             alert('Вы ничего не ввели. Игра прервана.');
             return;
     }
+    if (isNaN(userInput)) {
+        userInput = prompt('Вы ввели слово.\n\n Введите число от 1 до 100.');
+        if (userInput === null){
+            alert('Игра прервана. Вы нажали "Отмена".');
+            return;
+        }
+        if (userInput === '') {
+            alert('Вы ничего не ввели. Игра прервана.');
+            return;
+        }
+    }
+    
     let numberUser = Number(userInput);
     while (numberUser != number) {
-        
-        if (isNaN(numberUser) || numberUser < 1 || numberUser > 100){
+        if (numberUser === null){
+            alert('Игра прервана. Вы нажали "Отмена".');
+            return;
+        }
+        if (numberUser < 1 || numberUser > 100){
             numberUser = Number(prompt('Вы ввели неправильное число.\n\n Введите число от 1 до 100.'))
             continue;
         } 
