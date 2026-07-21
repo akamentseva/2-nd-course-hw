@@ -174,3 +174,56 @@ function startInvertedTextBtn() {
     const textReversed = userInput.split('').reverse().join('');
     alert(`Перевернутый текст:\n\n ${textReversed}`);
 }
+
+
+function startRockScissorsPaperBtn() {
+    const gameOptions = ['камень', 'ножницы', 'бумага'];
+    let usersChoice = prompt('Игра началась!\n\nВыберете:\n1. камень\n2. ножницы\n3. бумага');
+    if (usersChoice === null) {
+        alert('Игра прервана. Вы нажали "Отмена".');
+        return;
+    }
+    if (usersChoice.trim() === '') {
+        alert('Вы ничего не ввели! Игра прервана.');
+        return;
+    }
+    if (!isNaN(usersChoice) && usersChoice.trim() !== ''){
+        let newUsersChoice = prompt('Вы ввели число!\n\n Введите слово или текст:');
+        if (newUsersChoice === null) {
+            alert('Игра прервана. Вы нажали "Отмена".');
+            return;
+            }
+    
+    if (newUsersChoice.trim() === '') {
+        alert('Вы ничего не ввели!');
+        return;
+    }
+     if (!isNaN(newUsersChoice.trim())) {
+            alert('Вы опять ввели число! Игра прервана.');
+            return;
+    } 
+    usersChoice = newUsersChoice;
+}
+    
+    usersChoice = usersChoice.trim().toLowerCase();
+
+    if (!gameOptions.includes(usersChoice)) {
+        alert('Вы ввели неправильное слово!\n\nВведите: камень, ножницы, бумага');
+        return;
+    }
+    const randomIndex = Math.floor(Math.random() * gameOptions.length);
+    const computerChoice = gameOptions[randomIndex];
+    let result;
+    if (usersChoice === computerChoice) {
+        result = 'Ничья!';
+    } else if (
+        (usersChoice === 'камень' && computerChoice === 'ножницы') ||
+        (usersChoice === 'ножницы' && computerChoice === 'бумага') ||
+        (usersChoice === 'бумага' && computerChoice === 'камень')
+    ) {
+        result = 'Вы победили!';
+    } else {
+        result = 'Вы проиграли!';
+    }
+    alert(`Результат игры:\n\nВаш выбор: ${usersChoice}\nВыбор компьютера: ${computerChoice}\n\n${result}`);
+}
