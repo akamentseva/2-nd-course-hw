@@ -38,12 +38,11 @@ a{
   &__stripe {
     display: inline-block;
     animation: scrollLeft 15s linear infinite; 
+    background-color: #BCEC30;
   }
   &__stripe-wrapper{
     overflow: visible; ;
     position: relative;
-    padding: 16px 0;
-    background: #BCEC30;
 
     &::-webkit-scrollbar {
     height: 8px;
@@ -65,7 +64,8 @@ a{
     list-style-type: none;
     flex-wrap: nowrap;
     gap: 51px;
-    padding: 16px 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
     margin: 0;
     min-width: max-content;
 }

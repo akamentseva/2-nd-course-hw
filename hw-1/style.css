@@ -41,12 +41,11 @@ a {
 .hero-page__stripe {
   display: inline-block;
   animation: scrollLeft 15s linear infinite;
+  background-color: #BCEC30;
 }
 .hero-page__stripe-wrapper {
   overflow: visible;
   position: relative;
-  padding: 16px 0;
-  background: #BCEC30;
 }
 .hero-page__stripe-wrapper::-webkit-scrollbar {
   height: 8px;
@@ -67,7 +66,7 @@ a {
   list-style-type: none;
   flex-wrap: nowrap;
   gap: 51px;
-  padding: 16px 0;
+  padding-top: 30px;
   margin: 0;
   min-width: -moz-max-content;
   min-width: max-content;
