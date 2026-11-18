@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="title">Lorem, ipsum.</h1>
+    <button class="btn">Скрыть текст</button>
+    <button class="btn-text">Изменить текст</button>
+    <p class="description-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <button class="button">Изменить текст</button>
+    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p class="new-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <button class="bnt-app">Добавить элемент</button>
+    <button class="delete-btn">Удалить элемент</button>
+    <script>
+        //1
+        const titleEl = document.querySelector('.title');
+        const btnEl = document.querySelector('.btn');
+        btnEl.addEventListener('click', function() {
+            if (titleEl.style.display === 'none') {
+                titleEl.style.display = 'block';
+                btnEl.textContent = 'Скрыть';
+            } else {
+                titleEl.style.display = 'none';
+                btnEl.textContent = 'Показать';
+            }
+        });
+        //2
+        const descriptionEl = document.querySelector('.description-4');
+        const buttonEl = document.querySelector('.button');
+        buttonEl.addEventListener('click', function (e) {
+            descriptionEl.style.color = 'blue';
+        });
+        //3
+        const btnTextEl = document.querySelector('.btn-text');
+        btnTextEl.addEventListener('click', function (e) {
+            titleEl.textContent = 'Привет, мир!';
+        });
+        //4
+        const descAllEl = document.querySelectorAll('.description-4');
+        descAllEl.forEach(function(element) {
+        element.textContent = 'Измененный текст';
+        });
+        //5
+        const descriptionAllEl = document.querySelectorAll('.description');
+        descriptionAllEl.forEach(function(element) {
+        element.textContent = 'Новый текст';
+        });
+        //6
+        const btnappEl = document.querySelector('.bnt-app');
+        btnappEl.addEventListener('click', function (e) {
+            const textEl = document.createElement('p');
+            textEl.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.';
+            textEl.classList.add('text-app');
+            document.body.appendChild(textEl);
+        });
+        //7
+        const btnDeleteEl = document.querySelector('.delete-btn');
+        btnDeleteEl.addEventListener('click', function (e) {
+        const descEl = document.querySelector('.description');
+            descEl.remove();
+    })
+    </script>
+</body>
+</html>
